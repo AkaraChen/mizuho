@@ -28,4 +28,4 @@ Mizuho 可以是：
 
 | 花之宫瑞穗 | 宫小路瑞穗 |
 |------------|-------------|
-| ![Hananomiya](./assets/Hananomiya.webp) | ![Miyanokouji](./assets/Miyanokouji.webp) |
+| ![Hananomiya](./assets/Hananomiya.png) | ![Miyanokouji](./assets/Miyanokouji.png) |
