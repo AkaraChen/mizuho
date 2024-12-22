@@ -1,0 +1,79 @@
+{
+    "name": "mizuho",
+    "version": "1.0.0",
+    "description": "Fill in your package.json with your GitHub profile",
+    "scripts": {
+        "check": "biome check . --write",
+        "test": "vitest run",
+        "test:watch": "vitest",
+        "typecheck": "tsc --noEmit",
+        "build": "tsup",
+        "dev": "tsup --watch"
+    },
+    "keywords": [],
+    "author": {
+        "name": "AkaraChen",
+        "email": "akarachen@outlook.com",
+        "url": "https://github.com/AkaraChen"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@akrc/tsconfig": "1.1.0",
+        "@biomejs/biome": "1.9.4",
+        "@types/node": "^22.10.2",
+        "@types/yargs": "^17.0.33",
+        "tsup": "8.3.5",
+        "type-fest": "^4.30.2",
+        "typescript": "5.7.2",
+        "vitest": "2.1.8"
+    },
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "dependencies": {
+        "@humanfs/node": "^0.16.6",
+        "@inquirer/prompts": "^7.2.1",
+        "c12": "^2.0.1",
+        "consola": "^3.3.0",
+        "octokit": "^4.0.2",
+        "ora": "^8.1.1",
+        "read-pkg": "^9.0.1",
+        "write-package": "^7.1.0",
+        "yargs": "^17.7.2",
+        "zod": "^3.24.1"
+    },
+    "homepage": "https://github.com/akarachen/mizuho",
+    "bugs": {
+        "url": "https://github.com/akarachen/mizuho/issues",
+        "email": "akarachen@outlook.com"
+    },
+    "contributors": [
+        {
+            "name": "AkaraChen",
+            "email": "akarachen@outlook.com",
+            "url": "https://github.com/AkaraChen"
+        },
+        {
+            "name": "AkaraChen",
+            "email": "akarachen@outlook.com",
+            "url": "https://github.com/AkaraChen"
+        }
+    ],
+    "maintainers": [
+        {
+            "name": "AkaraChen",
+            "email": "akarachen@outlook.com",
+            "url": "https://github.com/AkaraChen"
+        },
+        {
+            "name": "AkaraChen",
+            "email": "akarachen@outlook.com",
+            "url": "https://github.com/AkaraChen"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/akarachen/mizuho.git"
+    }
+}
