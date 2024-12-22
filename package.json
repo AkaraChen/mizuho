@@ -75,5 +75,8 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/akarachen/mizuho.git"
+    },
+    "bin": {
+        "mizuho": "./dist/index.js"
     }
 }
