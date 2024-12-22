@@ -1,6 +1,6 @@
 {
     "name": "mizuho",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Fill in your package.json with your GitHub profile",
     "scripts": {
         "check": "biome check . --write",
