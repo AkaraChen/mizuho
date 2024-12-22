@@ -29,7 +29,6 @@ import os from 'node:os';
 import path from 'node:path';
 import { hfs } from '@humanfs/node';
 import { input } from '@inquirer/prompts';
-import { loadConfig } from 'c12';
 import { z } from 'zod';
 import { withSpinner } from './lib/ui';
 import { getUser, getUserByEmail, userExists } from './requests/github';
@@ -44,14 +43,15 @@ export interface Config {
 }
 
 export const load = async () => {
-    const resolved = await loadConfig<Config>({
-        name: 'mizuho',
-        configFile: undefined,
-    });
-    if (Object.keys(resolved.config).length === 0) {
+    if (!await hfs.isFile(configFile)) {
         return null;
     }
-    return resolved.config;
+    try {
+        const content = await hfs.json(configFile) as Config;
+        return content;
+    } catch (error) {
+        return null;
+    }
 };
 
 export const write = (config: Config) => {

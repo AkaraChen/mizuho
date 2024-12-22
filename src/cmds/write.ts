@@ -28,7 +28,7 @@
 import consola from 'consola';
 import { readPackage } from 'read-pkg';
 import type { PackageJson } from 'type-fest';
-import { updatePackage } from 'write-package';
+import { writePackage } from 'write-package';
 import * as config from '../config';
 
 export const write = async () => {
@@ -40,7 +40,7 @@ export const write = async () => {
         consola.success('Config file created');
         current = newConfig;
     }
-    const pkg = await readPackage();
+    const pkg = await readPackage({ normalize: false });
     const repoUrl = new URL(
         `${current.github}/${pkg.name}`,
         'https://github.com',
@@ -64,6 +64,9 @@ export const write = async () => {
             url: `git+${repoUrl}.git`,
         },
     };
-    await updatePackage(json);
+    await writePackage({
+        ...pkg,
+        ...json,
+    });
     consola.success('Updated package.json');
 };

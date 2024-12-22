@@ -11,11 +11,6 @@
         "dev": "tsup --watch"
     },
     "keywords": [],
-    "author": {
-        "name": "AkaraChen",
-        "email": "akarachen@outlook.com",
-        "url": "https://github.com/AkaraChen"
-    },
     "license": "ISC",
     "devDependencies": {
         "@akrc/tsconfig": "1.1.0",
@@ -34,7 +29,6 @@
     "dependencies": {
         "@humanfs/node": "^0.16.6",
         "@inquirer/prompts": "^7.2.1",
-        "c12": "^2.0.1",
         "consola": "^3.3.0",
         "octokit": "^4.0.2",
         "ora": "^8.1.1",
@@ -48,12 +42,19 @@
         "url": "https://github.com/akarachen/mizuho/issues",
         "email": "akarachen@outlook.com"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/akarachen/mizuho.git"
+    },
+    "bin": {
+        "mizuho": "./dist/index.js"
+    },
+    "author": {
+        "name": "AkaraChen",
+        "email": "akarachen@outlook.com",
+        "url": "https://github.com/AkaraChen"
+    },
     "contributors": [
-        {
-            "name": "AkaraChen",
-            "email": "akarachen@outlook.com",
-            "url": "https://github.com/AkaraChen"
-        },
         {
             "name": "AkaraChen",
             "email": "akarachen@outlook.com",
@@ -65,18 +66,6 @@
             "name": "AkaraChen",
             "email": "akarachen@outlook.com",
             "url": "https://github.com/AkaraChen"
-        },
-        {
-            "name": "AkaraChen",
-            "email": "akarachen@outlook.com",
-            "url": "https://github.com/AkaraChen"
         }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/akarachen/mizuho.git"
-    },
-    "bin": {
-        "mizuho": "./dist/index.js"
-    }
+    ]
 }
