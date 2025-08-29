@@ -31,7 +31,7 @@
         "@inquirer/prompts": "^7.2.1",
         "consola": "^3.3.0",
         "octokit": "^4.0.2",
-        "ora": "^8.1.1",
+        "nanospinner": "^1.1.0",
         "read-pkg": "^9.0.1",
         "write-package": "^7.1.0",
         "yargs": "^17.7.2",
