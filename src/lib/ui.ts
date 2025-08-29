@@ -25,21 +25,21 @@
  *       .^.++ n.+^^;o~o3i   ++*^o^^*^^~vvzo~on     ;
  */
 
-import ora from 'ora';
+import { createSpinner } from 'nanospinner';
 
 export async function withSpinner<T>(
     fn: (() => Promise<T>) | Promise<T>,
     message: string,
     errorMessage?: string,
 ) {
-    const spinner = ora(message).start();
+    const spinner = createSpinner(message).start();
     const promise = typeof fn === 'function' ? fn() : fn;
     try {
         const result = await promise;
-        spinner.succeed();
+        spinner.success();
         return result;
     } catch (error) {
-        spinner.fail();
+        spinner.error();
         if (errorMessage) {
             console.error(errorMessage);
         }
